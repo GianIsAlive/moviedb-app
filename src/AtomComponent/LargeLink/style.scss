@@ -1,0 +1,19 @@
+@import "../../style/_variables.scss";
+@import '../../style/_mixins.scss';
+
+.large-link {
+  display: inline-block;
+  font-size: $large-font-size;
+}
+
+.large-link-button {
+  @include button-style(60px, 44px);
+  letter-spacing: 0.01px;
+  color: white;
+  background: #30A2F2;
+  box-shadow: 0 5px 4px 0 rgba(38, 80, 126, 0.59);
+}
+
+.large-link-button:hover {
+  background: #0890EF;
+}

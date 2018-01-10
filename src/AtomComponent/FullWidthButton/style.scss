@@ -1,0 +1,16 @@
+@import "../../style/_variables.scss";
+@import '../../style/_mixins.scss';
+
+.full-width-button {
+  @include button-style(40px, 0);
+  width: 100%;
+  font-size: $small-font-size;
+  letter-spacing: 0.01px;
+  color: white;
+  background: #30A2F2;
+  box-shadow: 0 5px 4px 0 rgba(38, 80, 126, 0.59);
+}
+
+.full-width-button:hover {
+  background: #0890EF;
+}

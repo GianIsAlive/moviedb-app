@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, #app, .app-container {
+  width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+button, input, textarea {
+  border: none;
+  border-radius: 0;
+  background-color: rgb(167, 167, 167);
+  outline: none;
+}
+
+main {
+  background-color: #777777;
+}
+
+a {
+  text-decoration: none;
+}

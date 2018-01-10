@@ -1,0 +1,18 @@
+@import "../../style/_variables.scss";
+@import '../../style/_mixins.scss';
+
+.small-link {
+  display: inline-block;
+  font-size: $small-font-size;
+}
+.small-link-button {
+  @include button-style(40px, 24px);
+  letter-spacing: 0.01px;
+  color: white;
+  background: #30A2F2;
+  box-shadow: 0 5px 4px 0 rgba(38, 80, 126, 0.59);
+}
+
+.small-link-button:hover {
+  background: #0890EF;
+}

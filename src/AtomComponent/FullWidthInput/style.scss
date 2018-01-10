@@ -1,0 +1,9 @@
+@import "../../style/_variables.scss";
+
+.full-width-input {
+  display: inline-block;
+  width: 100%;
+  padding: 1%;
+  font-size: $small-font-size;
+  background-color: #FFFFFF;
+}
