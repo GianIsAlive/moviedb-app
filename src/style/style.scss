@@ -6,13 +6,20 @@ html {
   box-sizing: inherit;
 }
 
-html, body, #app, .app-container {
+html, body, #app {
   width: 100%;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+}
+
+.app-container {
+  position: relative;
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 button, input, textarea {
@@ -23,7 +30,7 @@ button, input, textarea {
 }
 
 main {
-  background-color: #777777;
+  background-color: #dfdfdf;
 }
 
 a {

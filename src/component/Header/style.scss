@@ -1,0 +1,29 @@
+.main-header {
+  position: relative;
+  padding: 1%;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-name, .movie-search-bar {
+  vertical-align: center;
+}
+
+.app-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.movie-search-bar input,
+.movie-search-bar button {
+  height: 40px;
+}
+
+.movie-search-bar input {
+  margin-right: 10px;
+  width: 300px;
+  padding-left: 10px;
+  font-size: 0.9rem;
+}
