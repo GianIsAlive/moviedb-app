@@ -1,5 +1,5 @@
 {
-  "name": "PolymerizeJS",
+  "name": "MovieDB-App",
   "version": "1.0.0",
   "description": "web development without writing code",
   "main": "index.js",
@@ -11,16 +11,19 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
+    "graphql": "^0.12.3",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
+    "react-relay": "^1.4.1",
     "react-router-dom": "^4.2.2",
     "validator": "^9.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-relay": "^1.4.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
