@@ -10,6 +10,54 @@
   width: 24%;
   height: 400px;
   margin: 0.5%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0 rgba(144,144,144,0.50);
+}
+
+.movie-container-overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 360px;
+  padding: 10%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.movie-container-overlay a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.85rem;
+  letter-spacing: 0.8px;
+  color: white;
+  background-color: #2FCBD2;
+  box-shadow: 0 4px 6px 1px rgba(0,72,75,0.34);
+  transition: all ease 0.5s;
+}
+
+.movie-container-overlay a:hover {
+  box-shadow: 0 6px 15px 1px rgba(0,72,75,0.64);
+}
+
+.movie-container:hover .movie-container-overlay {
+  display: block;
+}
+
+.movie-overview {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10%;
+}
+
+.movie-overview p {
+  position: absolute;
+  font-size: 0.8rem;
+  line-height: 20px;
+  bottom: 0;
 }
 
 .movie-image {
@@ -21,10 +69,10 @@
 
 .movie-image img {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 100%;
 }
 
 .movie-title {
@@ -39,4 +87,5 @@
 .movie-title p {
   text-align: center;
   line-height: 40px;
+  font-size: 0.9rem;
 }

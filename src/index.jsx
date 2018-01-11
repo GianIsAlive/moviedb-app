@@ -2,7 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
 // Component
 import App from './app/App';
@@ -14,7 +15,10 @@ import RootReducer from './app/RootReducer';
 import './style/reset.css';
 import './style/style.scss';
 
-const store = createStore(RootReducer);
+const store = createStore(
+  RootReducer,
+  applyMiddleware(thunk)
+);
 
 render(
   <Provider store={store}>
@@ -22,4 +26,5 @@ render(
       <Route path="/" component={App} />
     </Router>
   </Provider>,
-  document.getElementById('app'));
+  document.getElementById('app')
+);

@@ -1,9 +1,17 @@
-.main-header {
+.main-header-container {
   position: relative;
   padding: 1%;
-  background-color: red;
+}
+
+.main-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  padding: 1% 2%;
+  margin-top: 1%;
+  border-radius: 10px;
+  background-color: #F7F7F7;
+  box-shadow: 0 3px 11px 0 rgba(144,144,144,0.50);
 }
 
 .app-name, .movie-search-bar {
@@ -11,7 +19,8 @@
 }
 
 .app-name {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.8px;
   font-weight: 700;
   line-height: 40px;
 }
@@ -19,6 +28,7 @@
 .movie-search-bar input,
 .movie-search-bar button {
   height: 40px;
+  transition: all ease 0.5s;
 }
 
 .movie-search-bar input {
@@ -26,4 +36,24 @@
   width: 300px;
   padding-left: 10px;
   font-size: 0.9rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 8px 1px rgba(144,144,144,0.50);
+}
+
+.movie-search-bar input:focus {
+  box-shadow: 0 6px 15px 1px rgba(144,144,144,0.50);
+}
+
+.movie-search-bar button {
+  padding: 0 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  background: #2096FF;
+  box-shadow: 0 3px 8px 1px rgba(0,44,83,0.40);
+}
+
+.movie-search-bar button:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 15px 1px rgba(0,44,83,0.51);
 }
