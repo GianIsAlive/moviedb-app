@@ -1,0 +1,14 @@
+.main-footer-container {
+  position: relative;
+  padding: 1%;
+}
+
+.main-footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 2%;
+  border-radius: 10px;
+  background-color: #F7F7F7;
+  box-shadow: 0 3px 11px 0 rgba(144,144,144,0.50);
+}

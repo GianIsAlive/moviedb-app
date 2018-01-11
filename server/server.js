@@ -23,10 +23,9 @@ if (cluster.isMaster) {
 // Code to run if we're in a worker process
 } else {
   const app = express();
-  // app.use(history({
-  //   index: '/',
-  // }));
+  app.use(history({ index: '/' }));
   app.use(bodyParser.json());
+  app.use('/search', bodyParser.urlencoded());
 
   app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'));
@@ -40,6 +39,12 @@ if (cluster.isMaster) {
       .catch(() => {
         res.status(400).end('Oopsie daisy, movie is not found.');
       });
+  });
+
+  app.post('/search', (req, res) => {
+    console.log('This is req.body: ', req.body);
+    console.log('This is req.param: ', req.params);
+    res.end();
   });
 
   app.use('/dist', express.static(path.join(__dirname, '../dist')));

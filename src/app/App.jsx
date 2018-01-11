@@ -1,13 +1,18 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
-import PopularMovies from '../component/PopularMovies/PopularMovies';
 import Header from '../component/Header/Header';
+import PopularMovies from '../component/PopularMovies/PopularMovies';
+import SearchResult from '../component/SearchResult/SearchResult';
+import Footer from '../component/Footer/Footer';
 
 function App() {
   return (
     <main className="app-container">
       <Header />
-      <PopularMovies />
+      <Route path="/" component={PopularMovies} />
+      <Route path="/search" component={SearchResult} />
+      <Footer />
     </main>
   );
 }
