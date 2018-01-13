@@ -1,19 +1,8 @@
-export function handleChange(inputValue) {
+function handleChange(query) {
   return {
     type: 'HANDLE_CHANGE',
-    inputValue
+    query
   };
 }
 
-// export function submitSearch(movieName) {
-//   return {
-//     type: 'SUBMIT_SEARCH',
-//     movieName
-//   };
-// }
-
-// export function submitSearch(movieName) {
-//   return function (dispatch) {
-//     return 
-//   }
-// }
+export default handleChange;

@@ -1,8 +1,19 @@
-function handleAction(state = {}, action) {
+function handleAction(state = { pageNumber: 1 }, action) {
   switch (action.type) {
-    case 'SEE_DATA':
+    case 'DISPLAY_POPULAR_MOVIES':
       return {
-        data: action.data
+        popularMovies: action.popularMovies,
+        pageNumber: state.pageNumber
+      };
+    case 'GO_TO_NEXT_PAGE':
+      return {
+        popularMovies: state.popularMovies,
+        pageNumber: action.pageNumber
+      };
+    case 'GO_TO_PREVIOUS_PAGE':
+      return {
+        popularMovies: state.popularMovies,
+        pageNumber: action.pageNumber
       };
     default:
       return state;

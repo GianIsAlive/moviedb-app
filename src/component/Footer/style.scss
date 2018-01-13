@@ -1,6 +1,7 @@
 .main-footer-container {
   position: relative;
   padding: 1%;
+  margin-bottom: 1%;
 }
 
 .main-footer {
@@ -11,4 +12,41 @@
   border-radius: 10px;
   background-color: #F7F7F7;
   box-shadow: 0 3px 11px 0 rgba(144,144,144,0.50);
+}
+
+.main-footer nav {
+  position: relative;
+  margin: 0 auto;
+}
+
+.main-footer a {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 8px 1px rgba(151, 151, 151, 0.4);
+  transition: all ease 0.5s;
+}
+
+.main-footer a:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 15px 1px rgba(151, 151, 151, 0.4);
+}
+
+.main-footer a:active {
+  cursor: pointer;
+  box-shadow: 0 3px 8px 1px rgba(151, 151, 151, 0.4);
+}
+
+.main-footer p {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 16px;
+  border-radius: 5px;
+  margin: 0 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 8px 1px rgba(151, 151, 151, 0.4);
 }

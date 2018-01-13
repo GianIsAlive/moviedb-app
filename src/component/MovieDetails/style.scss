@@ -1,0 +1,167 @@
+.movie-detail-container {
+  position: relative;
+  width: 100%;
+  padding: 1%;
+}
+
+.movie-detail,
+.movie-recommendations-container,
+.movie-recommendations {
+  position: relative;
+  padding: 2%;
+  margin-bottom: 2%;
+  border-radius: 15px;
+  background-color: #F7F7F7;
+  box-shadow: 0 5px 10px 0 rgba(144,144,144,0.50);
+}
+
+.movie-detail,
+.movie-recommendations-container {
+  min-height: 400px;
+}
+
+.movie-detail-backdrop {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-detail-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.movie-detail-title h2,
+.movie-detail-title h3 {
+  text-align: center;
+  color: #FFFFFF;
+  mix-blend-mode: difference;
+}
+
+.movie-detail-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.movie-detail-title h2 {
+  font-size: 2rem;
+}
+
+.movie-detail-backdrop img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-detail-info {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.movie-detail-poster {
+  width: 30%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-detail-poster img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-detail-text {
+  width: 70%;
+  padding: 0 2%;
+}
+
+.movie-detail-text h3, {
+  font-size: 1.0rem;
+  font-weight: 700;
+}
+
+.movie-detail-text p {
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
+.movie-detail-text a,
+.movie-recommendations-text a {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background: #2096FF;
+  box-shadow: 0 3px 8px 1px rgba(0,44,83,0.40);
+  transition: all ease 0.5s;
+}
+
+.movie-detail-text a:hover,
+.movie-recommendations-text a:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 15px 1px rgba(0,44,83,0.51);
+}
+
+.movie-detail-text a:active,
+.movie-recommendations-text a:active {
+  cursor: pointer;
+  box-shadow: 0 3px 8px 1px rgba(0,44,83,0.40);
+}
+
+.movie-detail-genre p,
+.movie-casts p {
+  display: inline;
+}
+
+.movie-detail-genre p:after,
+.movie-casts p:after {
+  content: " | ";
+}
+
+.md-text {
+  margin-bottom: 10px;
+}
+
+.movie-recommendations h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.movie-recommendations-container {
+  display: flex;
+}
+
+.movie-recommendations-image {
+  width: 30%;
+}
+
+.movie-recommendations-image img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-recommendations-text {
+  width: 70%;
+  padding: 0 2%;
+}
+
+.movie-recommendations-text * {
+  margin-bottom: 2%;
+}
+
+.movie-recommendations-text h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.movie-recommendations-text p {
+  font-size: 0.9rem;
+  line-height: 20px;
+}

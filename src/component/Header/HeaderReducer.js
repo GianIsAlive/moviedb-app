@@ -1,17 +1,12 @@
 const initialState = {
-  inputValue: ''
+  query: ''
 };
 
 function handleAction(state = initialState, action) {
   switch (action.type) {
     case 'HANDLE_CHANGE':
       return {
-        inputValue: action.inputValue
-      };
-    case 'SUBMIT_SEARCH':
-      return {
-        inputValue: '',
-        movieName: action.movieName
+        query: action.query
       };
     default:
       return state;

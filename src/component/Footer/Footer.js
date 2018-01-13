@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 
 import FooterView from './FooterView';
 
-const Footer = connect()(FooterView);
+const mapStateToProps = state => state.footerReducer;
+
+const Footer = connect(mapStateToProps)(FooterView);
 
 export default Footer;

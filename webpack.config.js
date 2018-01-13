@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.join(__dirname, './dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   module: {
@@ -14,32 +14,32 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.(css|scss)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-        }),
+          use: ['css-loader', 'sass-loader']
+        })
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'file-loader',
         options: {
-          name: './img/[name].[ext]',
-        },
+          name: './img/[name].[ext]'
+        }
       },
       {
         test: /\.(woff|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'base64-font-loader',
-      },
-    ],
+        loader: 'base64-font-loader'
+      }
+    ]
   },
   plugins: [
-    new ExtractTextPlugin('./style.css'),
+    new ExtractTextPlugin('./style.css')
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
-  },
+    extensions: ['.js', '.jsx']
+  }
 };

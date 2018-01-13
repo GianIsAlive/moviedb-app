@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Component
 import App from './app/App';
@@ -19,6 +20,8 @@ const store = createStore(
   RootReducer,
   applyMiddleware(thunk)
 );
+
+// const history = syncHistoryWithStore(browserHistory, store);
 
 render(
   <Provider store={store}>
