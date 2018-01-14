@@ -1,17 +1,20 @@
-export function goToNextPage() {
+export function goToNextPage(pageNumber) {
   return {
-    type: 'GO_TO_NEXT_PAGE'
+    type: 'GO_TO_NEXT_PAGE',
+    pageNumber
   };
 }
 
-export function goToPreviousPage() {
+export function goToPreviousPage(pageNumber) {
   return {
-    type: 'GO_TO_PREVIOUS_PAGE'
+    type: 'GO_TO_PREVIOUS_PAGE',
+    pageNumber
   };
 }
 
 export function resetPageNumber() {
   return {
-    type: 'RESET_PAGE_NUMBER'
+    type: 'RESET_PAGE_NUMBER',
+    pageNumber: 1
   };
 }

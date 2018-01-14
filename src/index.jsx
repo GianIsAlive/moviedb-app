@@ -16,12 +16,26 @@ import RootReducer from './app/RootReducer';
 import './style/reset.css';
 import './style/style.scss';
 
+// Local Storage
+import {
+  loadState,
+  saveState
+} from './app/localStorage';
+
+const persistState = loadState();
+
 const store = createStore(
   RootReducer,
+  persistState,
   applyMiddleware(thunk)
 );
 
-// const history = syncHistoryWithStore(browserHistory, store);
+// Avoid page number reset when refresh the page
+store.subscribe(() => {
+  saveState({
+    pageNumber: store.getState('pageNumber')
+  });
+});
 
 render(
   <Provider store={store}>

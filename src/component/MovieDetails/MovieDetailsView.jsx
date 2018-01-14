@@ -18,7 +18,6 @@ class MovieDetailsView extends Component {
     dispatch(submitCastRequest(this.props.location.search));
   }
   render() {
-    console.log('This is props:', this.props);
     const { dispatch, details, casts, recommendations, location } = this.props;
     let MovieDetail = [];
     if (details) {
@@ -52,7 +51,7 @@ class MovieDetailsView extends Component {
             <section className="movie-detail-text">
               <h3 className="md-text">IMDb vote: {details.vote_average}</h3>
               <p className="md-text">{details.release_date}</p>
-              <div className="md-text movie-detail-genre">{Genre}</div>
+              <div className="md-text movie-detail-genre"><p>Genre: </p>{Genre}</div>
               <p className="md-text movie-country">Country: {details.production_countries.length !== 0 ? details.production_countries[0].name : 'United States'}</p>
               <div className="md-text movie-casts">
                 <p>Cast: </p>

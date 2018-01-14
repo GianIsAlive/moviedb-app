@@ -8,10 +8,16 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 1% 2%;
+  padding: 2% 2%;
   border-radius: 10px;
   background-color: #F7F7F7;
   box-shadow: 0 3px 11px 0 rgba(144,144,144,0.50);
+}
+
+@media only screen and (min-width: 768px) {
+  .main-footer {
+    padding: 1% 2%;
+  }
 }
 
 .main-footer nav {
@@ -19,9 +25,9 @@
   margin: 0 auto;
 }
 
-.main-footer a {
+.main-footer button {
   display: inline-block;
-  line-height: 40px;
+  height: 40px;
   padding: 0 20px;
   font-size: 0.8rem;
   letter-spacing: 0.5px;
@@ -31,12 +37,12 @@
   transition: all ease 0.5s;
 }
 
-.main-footer a:hover {
+.main-footer button:hover {
   cursor: pointer;
   box-shadow: 0 6px 15px 1px rgba(151, 151, 151, 0.4);
 }
 
-.main-footer a:active {
+.main-footer button:active {
   cursor: pointer;
   box-shadow: 0 3px 8px 1px rgba(151, 151, 151, 0.4);
 }

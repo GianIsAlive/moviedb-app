@@ -145,6 +145,8 @@
 .movie-recommendations-image img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .movie-recommendations-text {

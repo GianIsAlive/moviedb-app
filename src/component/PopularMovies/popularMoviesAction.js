@@ -15,24 +15,10 @@ function displayPopularMovies(popularMovies) {
   };
 }
 
-export function submitPopularMoviesReqeust(query) {
+function submitPopularMoviesReqeust(query) {
   return function (dispatch) {
     return getPopularMovies(query).then(data => dispatch(displayPopularMovies(data.data)));
   };
 }
 
-let counter = 2;
-
-export function goToNextPage() {
-  return {
-    type: 'GO_TO_NEXT_PAGE',
-    pageNumber: counter++
-  };
-}
-
-export function goToPreviousPage() {
-  return {
-    type: 'GO_TO_PREVIOUS_PAGE',
-    pageNumber: counter--
-  };
-}
+export default submitPopularMoviesReqeust;

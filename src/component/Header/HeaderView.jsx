@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
 import handleChange from './HeaderAction';
 
-function HeaderView({ dispatch, query }) {
+function HeaderView({ dispatch, history, query }) {
   return (
     <div className="main-header-container">
       <header className="main-header">
@@ -15,6 +16,7 @@ function HeaderView({ dispatch, query }) {
           className="movie-search-bar"
           onSubmit={(e) => {
             e.preventDefault();
+            return false;
           }}
         >
           <input
@@ -22,12 +24,13 @@ function HeaderView({ dispatch, query }) {
             placeholder="Enter a movie name"
             name="name"
             value={query}
-            onChange={(e) => { dispatch(handleChange(e.target.value)); }}
+            onChange={e => dispatch(handleChange(e.target.value))}
           />
           <button
             type="submit"
             onClick={() => {
-              window.location.href = `/search?movie-name=${query}`;
+              history.push(`/search?movie-name=${query}`);
+              return dispatch(handleChange(''));
             }}
           >
             Search
@@ -37,5 +40,17 @@ function HeaderView({ dispatch, query }) {
     </div>
   );
 }
+
+HeaderView.defaultProps = {
+  query: ''
+};
+
+HeaderView.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired,
+  query: PropTypes.string
+};
 
 export default HeaderView;
