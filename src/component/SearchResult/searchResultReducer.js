@@ -1,4 +1,4 @@
-function handleAction(state = {}, action) {
+const handleAction = (state = {}, action) => {
   switch (action.type) {
     case 'DISPLAY_SEARCH_RESULT':
       return {
@@ -7,6 +7,6 @@ function handleAction(state = {}, action) {
     default:
       return state;
   }
-}
+};
 
 export default handleAction;

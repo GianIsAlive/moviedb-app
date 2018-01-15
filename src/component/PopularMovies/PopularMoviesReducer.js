@@ -1,4 +1,8 @@
-function handleAction(state = { pageNumber: 1 }, action) {
+const initialState = {
+  pageNumber: 1
+};
+
+const handleAction = (state = initialState, action) => {
   switch (action.type) {
     case 'DISPLAY_POPULAR_MOVIES':
       return {
@@ -18,6 +22,6 @@ function handleAction(state = { pageNumber: 1 }, action) {
     default:
       return state;
   }
-}
+};
 
 export default handleAction;

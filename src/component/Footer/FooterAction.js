@@ -1,13 +1,9 @@
-export function changePageNumber(pageNumber) {
-  return {
-    type: 'CHANGE_PAGE_NUMBER',
-    pageNumber
-  };
-}
+export const changePageNumber = pageNumber => ({
+  type: 'CHANGE_PAGE_NUMBER',
+  pageNumber
+});
 
-export function resetPageNumber() {
-  return {
-    type: 'RESET_PAGE_NUMBER',
-    pageNumber: 1
-  };
-}
+export const resetPageNumber = () => ({
+  type: 'RESET_PAGE_NUMBER',
+  pageNumber: 1
+});

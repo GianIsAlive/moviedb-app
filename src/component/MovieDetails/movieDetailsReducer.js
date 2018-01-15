@@ -1,4 +1,4 @@
-function handleAction(state = {}, action) {
+const handleAction = (state = {}, action) => {
   switch (action.type) {
     case 'DISPLAY_MOVIE_DETAILS':
       return {
@@ -21,6 +21,6 @@ function handleAction(state = {}, action) {
     default:
       return state;
   }
-}
+};
 
 export default handleAction;
