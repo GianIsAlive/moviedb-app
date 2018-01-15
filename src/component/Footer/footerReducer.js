@@ -4,11 +4,7 @@ const initialState = {
 
 function handleAction(state = initialState, action) {
   switch (action.type) {
-    case 'GO_TO_NEXT_PAGE':
-      return {
-        pageNumber: action.pageNumber
-      };
-    case 'GO_TO_PREVIOUS_PAGE':
+    case 'CHANGE_PAGE_NUMBER':
       return {
         pageNumber: action.pageNumber
       };

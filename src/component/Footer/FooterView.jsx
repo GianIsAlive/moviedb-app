@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 import {
-  goToNextPage,
-  goToPreviousPage,
+  changePageNumber,
   resetPageNumber
 } from './FooterAction';
 
@@ -26,7 +25,7 @@ class FooterView extends Component {
               onClick={() => {
                 const num = pageNumber - 1;
                 if (num <= 1) return '';
-                dispatch(goToPreviousPage(num));
+                dispatch(changePageNumber(num));
                 window.scroll(0, 0);
                 return history.push(`/popular-movies?page=${num}`);
               }}
@@ -35,7 +34,7 @@ class FooterView extends Component {
             <button
               onClick={() => {
                 const num = pageNumber + 1;
-                dispatch(goToNextPage(num));
+                dispatch(changePageNumber(num));
                 window.scroll(0, 0);
                 return history.push(`/popular-movies?page=${num}`);
               }}

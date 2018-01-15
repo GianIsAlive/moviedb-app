@@ -1,13 +1,6 @@
-export function goToNextPage(pageNumber) {
+export function changePageNumber(pageNumber) {
   return {
-    type: 'GO_TO_NEXT_PAGE',
-    pageNumber
-  };
-}
-
-export function goToPreviousPage(pageNumber) {
-  return {
-    type: 'GO_TO_PREVIOUS_PAGE',
+    type: 'CHANGE_PAGE_NUMBER',
     pageNumber
   };
 }
