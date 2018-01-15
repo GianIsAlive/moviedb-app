@@ -15,7 +15,8 @@ function App() {
       <Route path="/popular-movies" component={PopularMovies} />
       <Route path="/search" component={SearchResult} />
       <Route path="/movie" component={MovieDetails} />
-      <Route path="/" component={Footer} />
+      <Route exact path="/" component={Footer} />
+      <Route exact path="/popular-movies" component={Footer} />
     </main>
   );
 }

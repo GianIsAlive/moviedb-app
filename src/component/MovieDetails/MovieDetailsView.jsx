@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -11,11 +12,10 @@ import {
 
 class MovieDetailsView extends Component {
   componentDidMount() {
-    // some action here
-    const { dispatch } = this.props;
-    dispatch(submitMovieDetailsRequest(this.props.location.search));
-    dispatch(submitRecommendationRequest(this.props.location.search));
-    dispatch(submitCastRequest(this.props.location.search));
+    const { dispatch, location } = this.props;
+    dispatch(submitMovieDetailsRequest(location.search));
+    dispatch(submitRecommendationRequest(location.search));
+    dispatch(submitCastRequest(location.search));
   }
   render() {
     const { dispatch, details, casts, recommendations, location } = this.props;
@@ -99,5 +99,30 @@ class MovieDetailsView extends Component {
     );
   }
 }
+
+MovieDetailsView.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    search: PropTypes.string.isRequired
+  }).isRequired,
+  details: PropTypes.shape({
+    genres: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired
+    })).isRequired
+  }).isRequired,
+  casts: PropTypes.shape({
+    cast: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired
+    })).isRequired
+  }).isRequired,
+  recommendations: PropTypes.shape({
+    results: PropTypes.arrayOf(PropTypes.shape({
+      poster_path: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      release_date: PropTypes.string.isRequired,
+      overview: PropTypes.string.isRequired
+    }).isRequired).isRequired
+  }).isRequired
+};
 
 export default MovieDetailsView;

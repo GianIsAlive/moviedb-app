@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import validator from 'validator';
 
 import './style.scss';
 
@@ -24,7 +25,12 @@ function HeaderView({ dispatch, history, query }) {
             placeholder="Enter a movie name"
             name="name"
             value={query}
-            onChange={e => dispatch(handleChange(e.target.value))}
+            onChange={(e) => {
+              if (validator.isAlphanumeric(e.target.value) === false) {
+                return '';
+              }
+              return dispatch(handleChange(e.target.value));
+            }}
           />
           <button
             type="submit"

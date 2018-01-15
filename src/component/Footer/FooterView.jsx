@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -10,31 +11,33 @@ import {
 
 class FooterView extends Component {
   componentWillReceiveProps(nextProps) {
+    const { dispatch } = this.props;
     if (nextProps.location.search === '') {
-      this.props.dispatch(resetPageNumber());
+      dispatch(resetPageNumber());
     }
   }
   render() {
+    const { dispatch, history, location, pageNumber } = this.props;
     return (
       <div className="main-footer-container">
         <footer className="main-footer">
           <nav type="context">
             <button
               onClick={() => {
-                const num = this.props.pageNumber - 1;
+                const num = pageNumber - 1;
                 if (num <= 1) return '';
-                this.props.dispatch(goToPreviousPage(num));
-                this.props.history.push(`/popular-movies?page=${num}`);
+                dispatch(goToPreviousPage(num));
                 window.scroll(0, 0);
+                return history.push(`/popular-movies?page=${num}`);
               }}
             >Previous</button>
-            <p>{this.props.location.search === '' ? 1 : this.props.pageNumber}</p>
+            <p>{location.search === '' ? 1 : pageNumber}</p>
             <button
               onClick={() => {
-                const num = this.props.pageNumber + 1;
-                this.props.dispatch(goToNextPage(num));
-                this.props.history.push(`/popular-movies?page=${num}`);
+                const num = pageNumber + 1;
+                dispatch(goToNextPage(num));
                 window.scroll(0, 0);
+                return history.push(`/popular-movies?page=${num}`);
               }}
             >next</button>
           </nav>
@@ -43,5 +46,16 @@ class FooterView extends Component {
     );
   }
 }
+
+FooterView.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired,
+  location: PropTypes.shape({
+    search: PropTypes.string
+  }).isRequired,
+  pageNumber: PropTypes.number.isRequired
+};
 
 export default FooterView;

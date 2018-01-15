@@ -32,9 +32,7 @@ const store = createStore(
 
 // Avoid page number reset when refresh the page
 store.subscribe(() => {
-  saveState({
-    pageNumber: store.getState('pageNumber')
-  });
+  saveState(store.getState());
 });
 
 render(
